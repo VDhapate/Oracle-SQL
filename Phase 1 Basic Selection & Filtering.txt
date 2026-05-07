@@ -1,0 +1,48 @@
+Phase 1: Basic Selection & Filtering (1-10)
+
+List all departments in the college.
+   select deptnm 
+   from department;
+
+2. Find all students whose gender is 'Female'.
+   select sname 
+   from stud
+   where gender = 'F';
+3. List the names and capacities of all venues.
+   select * 
+   from venue;
+
+4. Display all event names scheduled for a specific date (e.g., '15-AUG-2026').
+   select * 
+   from event 
+   where edate = '15-AUG-26';
+
+5. Find students whose names start with the letter 'A'.
+   select * 
+   from stud 
+   where sname like 'A%';
+
+6. List all organizers who are 'Student Coordinators'.
+   select * 
+   from organizer 
+   where role = 'STUDENT';
+
+7. Find venues with a capacity greater than 500.
+   select * 
+   from venue 
+   where capacity>500;
+
+8. List all unique roles available in the Organizer table.
+   select role 
+   from organizer 
+   group by role;
+
+9. Display student names and their mobile numbers.
+   select sname, mno 
+   from stud;
+
+10. Find events that do not have a Venue assigned yet (checking for nulls).
+    select ename 
+    from event 
+    where vid is null;
+    
